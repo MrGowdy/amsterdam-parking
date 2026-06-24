@@ -44,10 +44,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: |
-            www/index.html
-            www/build
-            www/assets
-            www/manifest.json
+            .www/index.html
+            .www/build
+            .www/assets
+            .www/manifest.json
 
   deploy:
     needs: build
