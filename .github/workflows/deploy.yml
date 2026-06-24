@@ -26,6 +26,12 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
+      - name: Check pnpm version
+        run: pnpm -v
+
+      - name: Disable Puppeteer download
+        run: echo "PUPPETEER_SKIP_DOWNLOAD=true" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: pnpm install
 
