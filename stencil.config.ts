@@ -1,7 +1,7 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 
-const isProd = process.env.NODE_ENV === 'production';
+const baseUrl = process.env.BASE_PATH || '/';
 
 export const config: Config = {
   globalStyle: 'src/global/app.css',
@@ -11,7 +11,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null,
-      baseUrl: isProd ? '/amsterdam-parking/' : '/',
+      baseUrl,
     },
   ],
   plugins: [
