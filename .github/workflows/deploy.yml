@@ -47,7 +47,7 @@ jobs:
       - name: Prepare deployment
         run: |
           mkdir dist
-          cp -r www/amsterdam-parking/* dist
+          cp -r www/* dist
           ls dist
 
       - name: Upload artifact
