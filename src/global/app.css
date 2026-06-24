@@ -1,15 +1,33 @@
-/*
-  Global App CSS
-  ----------------------
-  Use this file for styles that should be applied to all components.
-  For example, "font-family" within the "body" selector is a CSS property
-  most apps will want applied to all components.
-
-  Any global CSS variables should also be applied here.
-*/
-
 body {
   margin: 0px;
   padding: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+/* styles borrowed from "Kies locatie" in https://meldingen.amsterdam.nl/incident/vulaan */
+
+.meldingen-button {
+  height: 44px;
+  white-space: nowrap;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  text-decoration: none;
+  border-width: medium;
+  border-style: none;
+  border-color: currentcolor;
+  border-image: initial;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 12px 16px;
+  transition:
+    color 0.1s ease-in-out,
+    background-color 0.1s ease-in-out;
+  min-width: 90px;
+  background-color: rgb(0, 70, 153);
+  color: rgb(255, 255, 255);
 }

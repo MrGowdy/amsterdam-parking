@@ -6,60 +6,51 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppHome {
-    }
-    interface AppProfile {
-        "name": string;
-    }
     interface AppRoot {
+    }
+    interface ParkingDashboard {
+        "hourlyRate": number;
+        "maxCars": number;
+        "startingRate": number;
     }
 }
 declare global {
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
-    }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
-    };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
-    }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
-    };
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
     }
     var HTMLAppRootElement: {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLParkingDashboardElement extends Components.ParkingDashboard, HTMLStencilElement {
+    }
+    var HTMLParkingDashboardElement: {
+        prototype: HTMLParkingDashboardElement;
+        new (): HTMLParkingDashboardElement;
+    };
     interface HTMLElementTagNameMap {
-        "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "parking-dashboard": HTMLParkingDashboardElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppHome {
-    }
-    interface AppProfile {
-        "name"?: string;
-    }
     interface AppRoot {
     }
+    interface ParkingDashboard {
+        "hourlyRate": number;
+        "maxCars": number;
+        "startingRate": number;
+    }
     interface IntrinsicElements {
-        "app-home": AppHome;
-        "app-profile": AppProfile;
         "app-root": AppRoot;
+        "parking-dashboard": ParkingDashboard;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "parking-dashboard": LocalJSX.ParkingDashboard & JSXBase.HTMLAttributes<HTMLParkingDashboardElement>;
         }
     }
 }
