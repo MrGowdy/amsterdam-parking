@@ -40,16 +40,14 @@ jobs:
         env:
           BASE_PATH: /amsterdam-parking/
 
-      - name: Prepare build
-        run: |
-          mkdir dist
-          cp -r www/* dist
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
-          
+          path: ./www
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
