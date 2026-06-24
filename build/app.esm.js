@@ -1,0 +1,2 @@
+import{p as r,b as a}from"./p-03d0b500.js";export{s as setNonce}from"./p-03d0b500.js";import{g as t}from"./p-fc662416.js";var e=()=>{const a=import.meta.url;const t={};if(a!==""){t.resourcesUrl=new URL(".",a).href}return r(t)};e().then((async r=>{await t();return a([["p-24e19594",[[0,"app-root"],[0,"parking-dashboard",{hourlyRate:[2,"hourly-rate"],maxCars:[2,"max-cars"],startingRate:[2,"starting-rate"],accumulatedEarnings:[32],currentTime:[32],currentCars:[32],hoursPassedTotal:[32]}]]]],r)}));
+//# sourceMappingURL=app.esm.js.map
