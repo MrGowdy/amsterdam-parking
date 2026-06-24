@@ -43,10 +43,14 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Debug build output
+        run: ls -R
+
       - name: Prepare deployment
         run: |
           mkdir dist
           cp -r www/* dist
+          ls dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
