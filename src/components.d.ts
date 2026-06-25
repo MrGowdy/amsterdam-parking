@@ -13,6 +13,10 @@ export namespace Components {
         "maxCars": number;
         "startingRate": number;
     }
+    interface ParkingFooter {
+    }
+    interface ParkingHeader {
+    }
 }
 declare global {
     interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
@@ -27,9 +31,23 @@ declare global {
         prototype: HTMLParkingDashboardElement;
         new (): HTMLParkingDashboardElement;
     };
+    interface HTMLParkingFooterElement extends Components.ParkingFooter, HTMLStencilElement {
+    }
+    var HTMLParkingFooterElement: {
+        prototype: HTMLParkingFooterElement;
+        new (): HTMLParkingFooterElement;
+    };
+    interface HTMLParkingHeaderElement extends Components.ParkingHeader, HTMLStencilElement {
+    }
+    var HTMLParkingHeaderElement: {
+        prototype: HTMLParkingHeaderElement;
+        new (): HTMLParkingHeaderElement;
+    };
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "parking-dashboard": HTMLParkingDashboardElement;
+        "parking-footer": HTMLParkingFooterElement;
+        "parking-header": HTMLParkingHeaderElement;
     }
 }
 declare namespace LocalJSX {
@@ -40,9 +58,15 @@ declare namespace LocalJSX {
         "maxCars": number;
         "startingRate": number;
     }
+    interface ParkingFooter {
+    }
+    interface ParkingHeader {
+    }
     interface IntrinsicElements {
         "app-root": AppRoot;
         "parking-dashboard": ParkingDashboard;
+        "parking-footer": ParkingFooter;
+        "parking-header": ParkingHeader;
     }
 }
 export { LocalJSX as JSX };
@@ -51,6 +75,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "parking-dashboard": LocalJSX.ParkingDashboard & JSXBase.HTMLAttributes<HTMLParkingDashboardElement>;
+            "parking-footer": LocalJSX.ParkingFooter & JSXBase.HTMLAttributes<HTMLParkingFooterElement>;
+            "parking-header": LocalJSX.ParkingHeader & JSXBase.HTMLAttributes<HTMLParkingHeaderElement>;
         }
     }
 }

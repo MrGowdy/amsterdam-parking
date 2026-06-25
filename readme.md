@@ -1,6 +1,6 @@
 # Amsterdam Parking Dashboard
 
-https://mrgowdy.github.io/amsterdam-parking/
+Live hosted app: https://mrgowdy.github.io/amsterdam-parking/
 
 A couple of years from now, all civil servants of the munincipality of Amsterdam will move to one big building near Amstel Station. Underneath this new building, there will be a parking garage that is going to bring in a lot of tax revenue. 
 

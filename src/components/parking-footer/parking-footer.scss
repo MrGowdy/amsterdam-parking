@@ -1,0 +1,16 @@
+.parking-footer {
+  width: inherit;
+  background-color: rgb(118, 118, 118);
+  padding: 3.5rem;
+
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: red;
+      text-decoration: underline;
+    }
+  }
+}

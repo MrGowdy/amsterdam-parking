@@ -18,7 +18,9 @@ export class AppRoot {
   render() {
     return (
       <Host class='app-root' >
+        <parking-header class='app-root__header' />
         <parking-dashboard hourlyRate={this.hourlyRate} maxCars={this.maxCars} startingRate={this.startingRate} />
+        <parking-footer class='app-root__footer' />
       </Host >
     );
   }
