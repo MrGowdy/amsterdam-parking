@@ -24,11 +24,13 @@
     color: #2a3f54;
   }
 
-  &__section {
+  &__amounts {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    margin-block-end: 1.5rem;
+    margin-block: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 
   &__cars-count {
@@ -43,7 +45,6 @@
     gap: 0.5rem;
     padding: 0.625rem;
     border-radius: 0.375rem;
-    font-size: 0.875rem;
 
     &--success {
       background: #e6f7ec;
@@ -75,15 +76,33 @@
 
   &__changeCars {
     display: flex;
+    align-items: center;
     gap: 1rem;
 
     span {
-      min-width: 10rem;
+      min-width: 15rem;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
   }
 
-  // &__changeCarsBtn {
-  // }
+  &__changeCarBtn {
+    border-radius: 0.25rem;
+    color: #ffffff;
+    padding: 0.25rem;
+    width: 3.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &--add {
+      background-color: #2e7d32;
+    }
+
+    &--remove {
+      background-color: #c62828;
+    }
+  }
 
   &__settings {
     margin-block: 1.5rem;

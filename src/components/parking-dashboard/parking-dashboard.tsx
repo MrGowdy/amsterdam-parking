@@ -102,71 +102,6 @@ export class ParkingDashboard {
           <span>{formatTime(this.currentTime)}</span>
         </div>
 
-
-        <button
-          onClick={() => this.simulateDay()}
-          class="meldingen-button"
-        >
-          <span>Simuleer 1 dag</span>
-        </button>
-
-        <h2>Maximaal aantal auto's:</h2>
-        <div class="parking-dashboard__cars-count">{this.maxCars}</div>
-
-
-        <div class="parking-dashboard__section">
-          <h2>Auto's in de garage:</h2>
-          <div class="parking-dashboard__cars-count">{this.currentCars}</div>
-
-          <span
-            class={
-              `parking-dashboard__status  parking-dashboard__status--${this.carLimitReached ? 'error' : 'success'}`
-            }
-            alt-text={
-              this.carLimitReached ? 'Rood: De garage is vol' : `Rood: Er is ruimte voor meer auto's!`
-            }
-          >
-            {this.carLimitReached ? 'De garage is vol' : `Er is ruimte voor meer auto's!`}
-          </span>
-        </div>
-
-        <section class="parking-dashboard__actions">
-          <div class="parking-dashboard__changeCars">
-            <span>auto's naar binnen:</span>
-            <button
-              onClick={() => this.changeCarAmount(1)}
-              class="parking-dashboard__changeCarBtn"
-            >
-              <span>+ 1</span>
-            </button>
-
-
-            <button
-              onClick={() => this.changeCarAmount(10)}
-              class="parking-dashboard__changeCarBtn"
-            >
-              <span>+ 10</span>
-            </button>
-          </div>
-          <div class="parking-dashboard__changeCars">
-            <span>auto's naar buiten:</span>
-            <button
-              onClick={() => this.changeCarAmount(-1)}
-              class="parking-dashboard__changeCarBtn"
-            >
-              <span>- 1</span>
-            </button>
-
-
-            <button
-              onClick={() => this.changeCarAmount(-10)}
-              class="parking-dashboard__changeCarBtn"
-            >
-              <span>- 10</span>
-            </button>
-          </div>
-        </section >
-
         <section class="parking-dashboard__earnings">
           <h2 class="parking-dashboard__earnings-title">Financiën</h2>
 
@@ -183,14 +118,76 @@ export class ParkingDashboard {
           </span>
         </section>
 
+        <button
+          onClick={() => this.simulateDay()}
+          class="meldingen-button"
+        >
+          <span>Simuleer 1 dag</span>
+        </button>
+        <hr></hr>
+        <div class="parking-dashboard__amounts">
+
+          <span>Maximaal aantal auto's: {this.maxCars}</span>
+
+          <span>Auto's in de garage: {this.currentCars}</span>
+
+          <span
+            class={
+              `parking-dashboard__status  parking-dashboard__status--${this.carLimitReached ? 'error' : 'success'}`
+            }
+            alt-text={
+              this.carLimitReached ? 'Rood: De garage is vol' : `Rood: Er is ruimte voor meer auto's!`
+            }
+          >
+            {this.carLimitReached ? 'De garage is vol' : `Er is ruimte voor meer auto's!`}
+          </span>
+        </div>
+        <hr></hr>
+        <section class="parking-dashboard__actions">
+          <div class="parking-dashboard__changeCars">
+            <span>auto's naar binnen:</span>
+            <button
+              onClick={() => this.changeCarAmount(1)}
+              class="parking-dashboard__changeCarBtn parking-dashboard__changeCarBtn--add"
+            >
+              + 1
+            </button>
+
+
+            <button
+              onClick={() => this.changeCarAmount(10)}
+              class="parking-dashboard__changeCarBtn parking-dashboard__changeCarBtn--add"
+            >
+              + 10
+            </button>
+          </div>
+          <div class="parking-dashboard__changeCars">
+            <span>auto's naar buiten:</span>
+            <button
+              onClick={() => this.changeCarAmount(-1)}
+              class="parking-dashboard__changeCarBtn parking-dashboard__changeCarBtn--remove"
+            >
+              - 1
+            </button>
+
+
+            <button
+              onClick={() => this.changeCarAmount(-10)}
+              class="parking-dashboard__changeCarBtn parking-dashboard__changeCarBtn--remove"
+            >
+              - 10
+            </button>
+          </div>
+        </section >
+        <hr></hr>
         <section class="parking-dashboard__settings">
-          <h2 class="parking-dashboard__settings-title">Current prices:</h2>
+          <h2 class="parking-dashboard__settings-title">Huidige prijzen:</h2>
           <div class="parking-dashboard__settings-row">
-            <span>Starting rate:</span>
+            <span>Starttarief:</span>
             <span>€ {this.startingRate}</span>
           </div>
           <div class="parking-dashboard__settings-row">
-            <span>Hourly rate:</span>
+            <span>Uurtarief:</span>
             <span>€ {this.hourlyRate}</span>
           </div>
         </section>
